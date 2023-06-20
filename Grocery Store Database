@@ -1,0 +1,13 @@
+CREATE TABLE supermarket (id INTEGER PRIMARY KEY, name TEXT, price$ INTEGER, aisle INTEGER, quantity INTEGER, type TEXT );
+
+INSERT INTO supermarket VALUES (1, "bananas", 2, 5, 20, "fruit");
+INSERT INTO supermarket VALUES (2, "apples", 1, 5, 35, "fruit");
+INSERT INTO supermarket VALUES (3, "strawberries", 4, 5, 20, "fruit");
+INSERT INTO supermarket VALUES (4, "blueberries", 4, 5, 20, "fruit");
+INSERT INTO supermarket VALUES (5, "grapes", 3, 5, 15, "fruit");
+INSERT INTO supermarket VALUES (6, "brocolli", 2, 6, 20, "vegtable");
+INSERT INTO supermarket VALUES (7, "peas", 1, 6, 22, "vegtable");
+INSERT INTO supermarket VALUES (8, "napkins", 5, 9, 23, "cleaning");
+SELECT * FROM supermarket; 
+SELECT * FROM supermarket WHERE aisle < 6 ORDER by aisle;
+SELECT aisle, SUM(quantity) FROM supermarket GROUP BY aisle
